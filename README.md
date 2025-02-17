@@ -23,21 +23,6 @@ mistral-RAG 是一款結合 Retrieval-Augmented Generation (RAG) 技術的 AI �
 ---
 
 ## **🛠️ 技術架構**
-
-```mermaid
-graph TD;
-    A[User Query] -->|Rewrite| B[Query Rewriting];
-    B -->|Web Scraping| C[Scraper];
-    C -->|Chunking| D[Text Splitter];
-    D -->|Embedding| E[Vector Store (FAISS)];
-    A -->|Embedding| E;
-    E -->|Retrieve Top-K| F[Retriever];
-    F -->|Format Prompt| G[Prompt Builder];
-    G -->|Generate Answer| H[Mistral AI];
-    H -->|Return Response| I[Chatbot];
-    I -->|Send to User| J[User];
-```
-
 🔹 **核心技術棧：**
 
 - **LLM**：Mistral-7B-Instruct GPTQ (本地端部署)
