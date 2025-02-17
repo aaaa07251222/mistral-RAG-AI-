@@ -23,39 +23,7 @@ mistral-RAG 是一款結合 Retrieval-Augmented Generation (RAG) 技術的 AI �
 ---
 
 ## **🛠️ 技術架構**
-
-flowchart TD
-    %% Input & Preprocessing 區塊
-    subgraph "Input & Preprocessing"
-      A[User Query] -->|Rewrite| B[Query Rewriting]
-      B -->|Web Scraping| C[Scraper]
-      C -->|Chunking| D[Text Splitter]
-    end
-
-    %% Embedding & Retrieval 區塊
-    subgraph "Embedding & Retrieval"
-      D -->|Embedding| E[Vector Store (FAISS)]
-      A -->|Embedding| E
-      E -->|Retrieve Top-K| F[Retriever]
-    end
-
-    %% Response Generation 區塊
-    subgraph "Response Generation"
-      F -->|Format Prompt| G[Prompt Builder]
-      G -->|Generate Answer| H[Mistral AI]
-      H -->|Return Response| I[Chatbot]
-      I -->|Send to User| J[User]
-    end
-
-    %% 節點樣式設定
-    classDef startEnd fill:#c3e6cb,stroke:#155724,stroke-width:2px;
-    classDef process fill:#bee5eb,stroke:#0c5460,stroke-width:2px;
-    class A,J startEnd;
-    class B,C,D,E,F,G,H,I process;
-
-    %% 連線樣式設定
-    linkStyle default stroke:#6c757d,stroke-width:2px;
-
+![劉1](https://github.com/user-attachments/assets/668a3239-6583-4511-91e9-67ac04c7f029)![劉2](https://github.com/user-attachments/assets/fbf41164-58ec-4a73-ae7a-1d5497742666)![劉3](https://github.com/user-attachments/assets/c95fad70-a950-4d97-939d-57c0249bfe21)
 
 🔹 **核心技術棧：**
 
